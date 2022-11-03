@@ -1,18 +1,20 @@
 import { useEffect } from 'react';
-import './App.css';
 import { useTelegram } from './hooks/useTelegram';
+import Header from './components/header/header';
+import './App.css';
 
 function App() {
 
     const {onToggleButton, tg} = useTelegram();
 
     useEffect(() => {
-      tg.ready()
+      tg.ready();
     }, [])
 
   return (
     <div className="App">
-       <button onClick={onToggleButton}>Toggle</button>
+      <Header/>
+      <button onClick={onToggleButton}>Toggle</button>
     </div>
   );
 }
