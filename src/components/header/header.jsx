@@ -12,7 +12,7 @@ const Header = () => {
                 {user?.username}
             </span>
         </div>
-    )
-}
+    );
+};
 
 export default Header;
