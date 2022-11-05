@@ -1,12 +1,11 @@
 import './App.css';
-import React from 'react';
-import { useEffect } from 'react';
+import {React, useEffect} from 'react';
 import { useTelegram } from './hooks/useTelegram';
 import Header from './components/Header/Header';
 
 function App() {
 
-    const {onToggleButton, tg} = useTelegram();
+    const {onToggleButton, tg} = useTelegram;
 
     useEffect(() => {
       tg.ready();
